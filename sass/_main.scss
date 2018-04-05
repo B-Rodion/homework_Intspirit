@@ -1,5 +1,9 @@
 .main {
     background: #E7E7E7 url("../img/main-bg.png");
+
+    .wrapper {
+        background-color: #fff;
+    }
 }
 
 .main-navigation-list {
@@ -25,13 +29,24 @@
     }
 }
 
+.main-padding-conteiner {
+    padding: 0 20px 0 15px;
+}
+
 .main-blocks-heading {
     color: $h-main-color;
     font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 11px;
 
     &:first-letter {
         color: #000;
     }
+}
+
+.main-about-text {
+    width: 100%;
+    margin: 0;
 }
 
 .first-heading {
@@ -45,7 +60,7 @@
     
 .wrapper {
     max-width: $max-width-desctop;
-    min-height: 100%;
+    // min-height: 100%;
 }
 
 .main-navigation-list {
