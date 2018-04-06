@@ -203,6 +203,94 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .wrapper {
+    max-width: 100%;
+    min-width: 320px;
+  }
+  .main-header {
+    width: 100%;
+    background: #000 url("../img/header-top-bg.png") repeat-x;
+  }
+  .main-header .header-top {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .main-header .header-top .header-block-logo {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .main-header .header-top .header-block-search {
+    width: 45%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-header .logo {
+    font-size: 30px;
+    font-stretch: ultra-condensed;
+    letter-spacing: -2px;
+    line-height: 20px;
+    color: white;
+    margin-top: 8%;
+  }
+  .main-header .logo .logo-gray-text {
+    color: #b0b0b0;
+  }
+  .search-input {
+    width: 80%;
+    height: 27px;
+    background-color: #323232;
+    border: 1px solid #4c4c4c;
+  }
+  .search-button {
+    width: 75px;
+    height: 27px;
+    background-color: #000;
+    border: 1px solid #4c4c4c;
+    color: #fff;
+  }
+  .logo-description {
+    margin: 0;
+    margin-top: 3px;
+    color: #686868;
+  }
+  .header-slider-block {
+    background: #000;
+    height: auto;
+  }
+  .header-slider-block .header-slider-text {
+    margin: 0;
+    min-height: 330px;
+  }
+  .slide {
+    position: relative;
+  }
+  .slide .slide__description {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 57px;
+    display: flex;
+  }
+  .slide .slide__description .slide__text {
+    color: white;
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 2%;
+    align-content: center;
+  }
+}
+
 .main {
   background: #E7E7E7 url("../img/main-bg.png");
 }
@@ -418,32 +506,6 @@ body {
   transition: all 0.3s;
 }
 
-.main-footer {
-  background: #E7E7E7 url("../img/main-bg.png");
-  padding: 10px 0;
-}
-
-.main-footer .copyright {
-  margin: 0;
-  color: #656565;
-}
-
-.main-footer .copyright a {
-  color: #0075d0;
-}
-
-.main-footer .copyright a:hover {
-  color: #0061ac;
-}
-
-.main-footer .copyright a:active {
-  color: #2a008b;
-}
-
-.main-footer .copyright span {
-  margin-right: 3px;
-}
-
 @media (min-width: 1920px) {
   .container {
     margin: 0 auto;
@@ -555,6 +617,103 @@ body {
     width: 150.266px;
     padding-right: 20%;
   }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+  .wrapper {
+    max-width: 51%;
+    min-width: 320px;
+  }
+  .main-images .images-block {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .main-images .images-block img {
+    border: 12px solid #e2e2e2;
+  }
+  .main-lists {
+    justify-content: space-around;
+  }
+  .main-lists .lists-desctiption {
+    flex-grow: 1;
+  }
+  .main-lists .lists-number,
+  .main-lists .lists-marker,
+  .main-lists .lists-desctiption {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  .main-table-block .table-heading {
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+  .main-table-block .main-table {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    border-bottom: 0;
+    border-collapse: collapse;
+  }
+  .main-table-block .main-table tr:first-of-type {
+    display: none;
+  }
+  .main-table-block .main-table tr {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .main-table-block .main-table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    line-height: 30px;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+  .main-table-block .main-table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    background-color: #efefef;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20%;
+  }
+  .main-table-block .main-table td:first-child:before {
+    width: 150.266px;
+    padding-right: 20%;
+  }
+}
+
+.main-footer {
+  background: #E7E7E7 url("../img/main-bg.png");
+  padding: 10px 0;
+}
+
+.main-footer .copyright {
+  margin: 0;
+  color: #656565;
+}
+
+.main-footer .copyright a {
+  color: #0075d0;
+}
+
+.main-footer .copyright a:hover {
+  color: #0061ac;
+}
+
+.main-footer .copyright a:active {
+  color: #2a008b;
+}
+
+.main-footer .copyright span {
+  margin-right: 3px;
 }
 
 .slick-prev,

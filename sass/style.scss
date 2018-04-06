@@ -1,6 +1,7 @@
-$docum-font: "Arial", sans-serif;
+$index-font: "Arial", sans-serif;
 $h-main-color: #838383;
 $wrap-min-width: 541px;
+$min-width-mobile: 320px;
 $wrap-max-width: 51%;
 $max-width-desctop: 1000px;
 
@@ -9,7 +10,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: $docum-font;
+    font-family: $index-font;
     font-size: 13px;
     line-height: 20px;
 }
@@ -17,6 +18,8 @@ body {
 @import "header";
 
 @import "main";
+
+@import "footer";
 
 .slick-prev,
 .slick-next {

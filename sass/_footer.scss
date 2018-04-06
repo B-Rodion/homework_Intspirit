@@ -1,0 +1,25 @@
+.main-footer {
+    background: #E7E7E7 url("../img/main-bg.png");
+    padding: 10px 0;
+
+    .copyright {
+        margin: 0;
+        color: #656565;
+
+        a {
+            color: #0075d0;
+
+            &:hover {
+                color: #0061ac;
+            }
+
+            &:active {
+                color: #2a008b;
+            }
+        }
+
+        span {
+            margin-right: 3px;
+        }
+    }
+}
