@@ -14,12 +14,12 @@
         <div class="wrapper container">
             <div class="header-top">
                 <div class="header-block-logo container">
-                    <a class="logo">Black<span class="logo-gray-text">and</span>White</a>
+                    <a href="#" class="logo">Black<span class="logo-gray-text">and</span>White</a>
                     <p class="logo-description">Lorem ipsum dolor sit amet</p>
                 </div>
                 <div class="header-block-search container">
                     <input class="search-input" type="search">
-                    <button class="search-button" type="button">Search</button>
+                    <button class="search-button button__effect" type="button">Search</button>
                 </div>
             </div>
 
@@ -59,17 +59,17 @@
             <div class="main-content">
                 <div class="main-navigation">
                     <ul class="main-navigation-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a class="button__effect" href="#">Home</a></li>
+                        <li><a class="button__effect" href="#">About</a></li>
+                        <li><a class="button__effect" href="#">Work</a></li>
+                        <li><a class="button__effect" href="#">Blog</a></li>
+                        <li><a class="button__effect" class="button__effect"href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="main-padding-conteiner">
                     <section class="main-about">
                         <h1 class="main-blocks-heading first-heading">What we do</h1>
-                        <p class="main-about-text">Lorem ipsum dolor sit amet, <a>consectetur adipisicing elit</a>, sed do eiusmod
+                        <p class="main-about-text">Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
                             <i>commodo consequat</i>. Duis aute irure dolor in reprehenderit in voluptate 
@@ -153,29 +153,30 @@
                     </div>
 
                     <section class="main-form-block">
-                        <h2 class="main-blocks-heading">Forms</h2>
-                        <form action="" method="GET">
-                            <label for="text">Text:</label>
-                            <input id="text" type="text">
+                        <h2 class="main-blocks-heading form-title">Forms</h2>
+                        <form class="main-form" action="" method="GET">
+                            <label class="label-text" for="text">Text:</label>
+                            <input class="input-text" id="text" type="text" placeholder="Input type text">
 
                             <label for="sel">Select:</label>
-                            <select name="form-select" id="sel">
+                            <select class="form-options" name="form-select" id="sel">
                                 <option value="value-1">Option 1</option>
                                 <option value="value-2">Option 2</option>
                                 <option value="value-3">Option 3</option>
                                 <option value="value-4">Option 4</option>
                             </select>
-
-                            <input type="checkbox" name="form-checkbox" id="checkbox">
-                            <label for="checkbox">Sed ut perspiciatis unde omnis iste natus</label>
-
-                            <input type="radio" name="form-radio" id="radiobtn">
-                            <label for="radiobtn">Lorem ipsum dolor sit amet, consectetur</label>
-
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="form-checkbox" id="checkbox">
+                                <label class="checkbox-label" for="checkbox">Sed ut perspiciatis unde omnis iste natus</label>
+                            </div>
+                            <div class="radio-container">
+                                <input type="radio" name="form-radio" id="radiobtn">
+                                <label class="radio-label" for="radiobtn">Lorem ipsum dolor sit amet, consectetur</label>
+                            </div>
                             <label for="textarea">Textarea:</label>
-                            <textarea name="form-textarea" id="textarea" cols="30" rows="10"></textarea>
+                            <textarea class="textarea-form" name="form-textarea" id="textarea" cols="30" rows="10"></textarea>
 
-                            <button class="main-form-button" type="submit">Button</button>
+                            <button class="form-button button__effect" class="main-form-button" type="submit">Button</button>
                         </form>
                     </section>
                 </div>
@@ -184,13 +185,13 @@
     </main>
 
     <footer class="main-footer">
-        <div class="footer-copyright">
-            <p class="copyright"><span>&copy;</span>Footer content <a href="#">Link footer</a></p>
+        <div class="wrapper container">
+            <div class="footer-copyright">
+                <p class="copyright"><span>&copy;</span>Footer content <a href="#">Link footer</a></p>
+            </div>
         </div>
     </footer>
 
-    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/script.js"></script>

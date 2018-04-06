@@ -1,3 +1,29 @@
+.button__effect {
+    &:hover {
+        background-color: #444444;
+        transition: all 0.3s;
+    }
+
+    &:active {
+        background-color: rgb(19, 19, 19);
+        color: #b9b9b9;
+        transition: all 0.3s;
+    }
+}
+
+.logo {
+    text-decoration: none;
+    pointer-events: none;
+}
+
+.slider {
+    height: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
 @media (min-width: 1920px) {
 .container {
     margin: 0 auto;
@@ -37,9 +63,9 @@
             color: white;
             margin-top: 8%;
 
-                .logo-gray-text {
-                    color: #b0b0b0;
-                }
+            .logo-gray-text {
+                color: #b0b0b0;
+            }
     }
 }
 
@@ -56,6 +82,8 @@
     background-color: #000;
     border: 1px solid #4c4c4c;
     color: #fff;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .logo-description {
@@ -186,5 +214,9 @@
         }
     }
 }
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
 
 }
