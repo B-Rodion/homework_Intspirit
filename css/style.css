@@ -32,8 +32,26 @@ body {
   width: 100%;
 }
 
+.header-block-search .search-input {
+  animation-name: searchBorderColor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 .header-block-search .visible_mobile {
   width: 27px;
+}
+
+@keyframes searchBorderColor {
+  0% {
+    border-color: #323232;
+  }
+  50% {
+    border-color: #7e7e7e;
+  }
+  100% {
+    border-color: #323232;
+  }
 }
 
 @media (min-width: 1921px) {
@@ -217,6 +235,9 @@ body {
   .container {
     margin: 0;
   }
+  .wrapper {
+    max-width: 100%;
+  }
   .main-header {
     width: 100%;
     background: #000 url("../img/header-top-bg.png") repeat-x;
@@ -229,13 +250,17 @@ body {
   }
   .main-header .header-top .header-block-logo {
     margin: 0;
+    width: 50%;
     padding-left: 3%;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  .main-header .header-top .header-block-logo a {
+    margin-top: 0;
   }
   .main-header .header-top .header-block-search {
-    width: 45%;
+    width: 50%;
     margin: 0;
     padding-right: 3%;
     display: flex;
@@ -458,11 +483,34 @@ body {
   height: 30px;
   border: 1px solid #b7b7b7;
   margin-bottom: 20px;
+  padding-left: 8px;
+  background: url("../img/custom-select.png") no-repeat 200px 50%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .main-form-block .checkbox-container {
   display: flex;
   margin-bottom: 5px;
+}
+
+.main-form-block .checkbox-container .input-checkbox + label {
+  cursor: pointer;
+}
+
+.main-form-block .checkbox-container .input-checkbox {
+  width: 13px;
+  height: 13px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+.main-form-block .checkbox-container .input-checkbox:before {
+  position: absolute;
+  background-image: url("../img/custom-checkbox.png") 0 0;
 }
 
 .main-form-block .checkbox-container .checkbox-label {
@@ -472,6 +520,10 @@ body {
 .main-form-block .radio-container {
   display: flex;
   margin-bottom: 12px;
+}
+
+.main-form-block .radio-container .input-radio + label {
+  cursor: pointer;
 }
 
 .main-form-block .radio-container .radio-label {
@@ -504,6 +556,74 @@ body {
   background-color: #131313;
   color: #b9b9b9;
   transition: all 0.3s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  padding-left: 20px;
+  position: relative;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid black;
+  background: linear-gradient(-45deg, #ffffff, #cacaca);
+  position: absolute;
+  top: 2px;
+  left: 0px;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  display: block;
+  background-color: #4d4d4d;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: 4px;
+  left: 2px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: block;
+  padding-left: 20px;
+  position: relative;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #ffffff, #cacaca);
+  position: absolute;
+  top: 2px;
+  left: 0px;
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  display: block;
+  background-color: #4d4d4d;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 6px;
+  left: 4px;
 }
 
 @media (min-width: 1921px) {
@@ -629,32 +749,39 @@ body {
   }
   .main-navigation-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .main-navigation-list li {
+    flex-grow: 1;
   }
   .main-navigation-list li a {
-    padding: 0 36px;
+    flex-grow: 1;
+    text-align: center;
   }
   .main-images .images-block {
     margin: 0;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   .main-images .images-block img {
+    display: flex;
     border: 12px solid #e2e2e2;
-    flex-grow: 2;
+    margin-left: auto;
+    margin-right: auto;
   }
   .main-lists {
-    justify-content: space-around;
+    flex-direction: column;
   }
-  .main-lists .lists-desctiption {
-    flex-grow: 1;
+  .main-lists .lists-marker {
+    padding-left: 20px;
   }
   .main-lists .lists-number,
   .main-lists .lists-marker,
   .main-lists .lists-desctiption {
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
   }
   .main-table-block .table-heading {
     margin-top: 20px;
@@ -680,7 +807,7 @@ body {
     line-height: 30px;
     border-bottom: 1px solid #d5d5d5;
     padding: 0;
-    padding-right: 50px;
+    padding-right: 8px;
     box-sizing: border-box;
   }
   .main-table-block .main-table td:before {
@@ -689,23 +816,38 @@ body {
     font-weight: bold;
     background-color: #efefef;
     text-align: left;
-    padding-left: 20px;
-    padding-right: 20%;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .main-table-block .main-table td:first-child:before {
     width: 150.266px;
-    padding-right: 20%;
+    padding-right: 8px;
+  }
+  .main-form-block .input-text {
+    width: 100%;
+  }
+  .main-form-block .form-options {
+    width: 100%;
+    background-position: 98% 50%;
+  }
+  .main-form-block .textarea-form {
+    width: 99%;
   }
 }
 
 .main-footer {
   background: #E7E7E7 url("../img/main-bg.png");
-  padding: 10px 0;
+  width: 100%;
+}
+
+.main-footer .footer-copyright {
+  width: 100%;
 }
 
 .main-footer .copyright {
   margin: 0;
   color: #656565;
+  padding: 10px 0;
 }
 
 .main-footer .copyright a {
@@ -722,6 +864,39 @@ body {
 
 .main-footer .copyright span {
   margin-right: 3px;
+}
+
+@media (min-width: 1921px) {
+  .container {
+    margin: 0 auto;
+  }
+  .wrapper {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1920px) {
+  .container {
+    margin: 0 auto;
+  }
+  .wrapper {
+    max-width: 51%;
+    min-width: 541px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .wrapper {
+    max-width: 100%;
+    min-width: 320px;
+  }
+  .footer-copyright {
+    box-sizing: border-box;
+    padding-left: 3%;
+  }
 }
 
 .slick-prev,

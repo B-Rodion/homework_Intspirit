@@ -1,10 +1,14 @@
 .main-footer {
     background: #E7E7E7 url("../img/main-bg.png");
-    padding: 10px 0;
+    width: 100%;
+    .footer-copyright {
+        width: 100%;
+    }
 
     .copyright {
         margin: 0;
         color: #656565;
+        padding: 10px 0;
 
         a {
             color: #0075d0;
@@ -21,5 +25,42 @@
         span {
             margin-right: 3px;
         }
+    }
+}
+
+@media (min-width: 1921px) {
+    .container {
+        margin: 0 auto;
+    }
+        
+    .wrapper {
+        max-width: $max-width-desctop;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1920px) {
+    .container {
+        margin: 0 auto;
+    }
+        
+    .wrapper {
+        max-width: $wrap-max-width;
+        min-width: $wrap-min-width;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        margin: 0 auto;
+    }
+        
+    .wrapper {
+        max-width: 100%;
+        min-width: $min-width-mobile;
+    }
+
+    .footer-copyright {
+        box-sizing: border-box;
+        padding-left: 3%;
     }
 }
